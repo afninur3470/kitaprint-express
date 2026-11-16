@@ -17,10 +17,17 @@ Route::middleware('auth')->group(function () {
 // PISAHKAN ROUTE TIM AGAR TIDAK BENTROK
 // ==========================================
 Route::middleware(['auth'])->group(function () {
-    require __DIR__.'/teams/customer.php'; // Dipegang Teman 3
-    require __DIR__.'/teams/mitra.php';    // Dipegang Teman 4
-    require __DIR__.'/teams/kurir.php';    // Dipegang Teman 5
-    require __DIR__.'/teams/admin.php';    // Dipegang Teman 6
+    // Teman 3 mengedit file ini
+    require __DIR__.'/teams/customer.php'; 
+    
+    // Teman 4 mengedit file ini
+    require __DIR__.'/teams/mitra.php';    
+    
+    // Teman 5 mengedit file ini
+    require __DIR__.'/teams/kurir.php';    
+    
+    // Teman 6 mengedit file ini (Admin)
+    require __DIR__.'/teams/admin.php';    
 });
 
 require __DIR__.'/auth.php';
