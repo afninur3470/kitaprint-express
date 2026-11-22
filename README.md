@@ -3,7 +3,7 @@
 
 KitaPrint Express adalah platform digital yang menghubungkan Pengguna Umum (Mahasiswa/Masyarakat), Tenant Fotocopy, dan Kurir Mahasiswa. Kami menyediakan solusi pemesanan cetak dokumen kilat antar-jemput dengan fitur AI Live Preview, Share Lock Pinpoint, Splitbill, dan Layanan Express.
 
-## 👥 Tim Pengembang (Kelompok 7)
+## 👥 Tim Pengembang
 *   Nadya Cahya Eriani (2357201019)
 *   Lili Mahdania (2357201025)
 *   Nur Afni (2357201001)
