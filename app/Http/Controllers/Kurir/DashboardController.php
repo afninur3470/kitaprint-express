@@ -7,25 +7,21 @@ use App\Models\Order;
 
 class DashboardController extends Controller
 {
-    public function index()
-    {
-        // Ambil semua order yang belum diambil kurir
-        $orders = Order::where('status', 'pending')->whereNull('courier_id')->latest()->get();
-        return view('pages.kurir.dashboard', compact('orders'));
-    }
+    public function index() {
+    // Kurir hanya bisa mengambil order yang sudah selesai dicetak (ready)
+    $availableOrders = \App\Models\Order::where('status', 'ready')->whereNull('courier_id')->latest()->get();
+    $activeOrders = \App\Models\Order::where('courier_id', auth()->id())->where('status', 'delivering')->latest()->get();
+    
+    return view('pages.kurir.dashboard', compact('availableOrders', 'activeOrders'));
+}
 
-    public function accept(Order $order)
-    {
-        $order->update([
-            'courier_id' => auth()->id(),
-            'status' => 'delivering'
-        ]);
-        return back()->with('success', 'Order berhasil diterima. Silakan antar ke tujuan!');
-    }
+public function accept(\App\Models\Order $order) {
+    $order->update(['courier_id' => auth()->id(), 'status' => 'delivering']);
+    return back()->with('success', 'Order diterima!');
+}
 
-    public function complete(Order $order)
-    {
-        $order->update(['status' => 'completed']);
-        return back()->with('success', 'Pesanan telah sukses diantar ke pengguna!');
-    }
+public function complete(\App\Models\Order $order) {
+    $order->update(['status' => 'completed']);
+    return back()->with('success', 'Pesanan selesai diantar!');
+}
 }

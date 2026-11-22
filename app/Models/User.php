@@ -17,4 +17,5 @@ class User extends Authenticatable {
         return ['email_verified_at' => 'datetime', 'password' => 'hashed'];
     }
     public function store() { return $this->hasOne(Store::class); }
+    public function wallet() { return $this->hasOne(CourierWallet::class); }
 }
