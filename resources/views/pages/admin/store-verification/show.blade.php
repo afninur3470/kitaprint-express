@@ -12,7 +12,7 @@
         <h3 class="font-bold text-dark border-b border-border pb-2 mb-3">Data Usaha</h3>
         <div class="space-y-2 text-sm">
             <div class="flex justify-between"><span class="text-secondary">Nama</span><span class="font-semibold">{{ $store->name }}</span></div>
-            <div class="flex justify-between"><span class="text-secondary">Jenis</span><span class="font-semibold">{{ $store->business_type->label() }}</span></div>
+            <div class="flex justify-between"><span class="text-secondary">Jenis</span><span class="font-semibold">{{ ucwords(str_replace('_', ' ', $store->business_type)) }}</span></div>
             <div class="flex justify-between"><span class="text-secondary">Pemilik</span><span class="font-semibold">{{ $store->owner->name }}</span></div>
             <div class="flex justify-between"><span class="text-secondary">Telepon</span><span class="font-semibold">{{ $store->phone }}</span></div>
             <div class="pt-2">

@@ -28,7 +28,7 @@
         </div>
         <div class="p-6 bg-gray-50 space-y-3 text-sm">
             <div class="flex justify-between"><span class="text-secondary">Nama Usaha</span><span class="font-semibold text-dark">{{ $store->name }}</span></div>
-            <div class="flex justify-between"><span class="text-secondary">Jenis</span><span class="font-semibold text-dark">{{ $store->business_type->label() }}</span></div>
+            <div class="flex justify-between"><span class="text-secondary">Jenis</span><span class="font-semibold text-dark">{{ ucwords(str_replace('_', ' ', $store->business_type)) }}</span></div>
         </div>
     </div>
 </div>
