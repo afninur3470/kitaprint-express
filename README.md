@@ -7,7 +7,7 @@ KitaPrint Express adalah platform digital yang menghubungkan Pengguna Umum (Maha
 *   Nadya Cahya Eriani (2357201019)
 *   Lili Mahdania (2357201025)
 *   Nur Afni (2357201001)
-*   Ferly Salsabila Siregar (2357201015)
+*   Ferly Salsabilla Siregar (2357201015)
 *   Oktari Nurherfanny (2357201012)
 *   David Hans Sitorus (2357201035)
 *   Ricki Saputra (2357201031)
